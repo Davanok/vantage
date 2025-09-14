@@ -3,7 +3,7 @@ This shell script helps you to provide [Lenovo Vantage](https://www.lenovo.com/u
 
 ## :rocket: Features
 ![image](images/main_menu.png)
-![img.png](images/power_mode_menu.png)
+![img](images/power_mode_menu.png)
 * Conservation Mode (Limit battery charge to prolong its life)
 * Always-On USB (Enable USB power output when the system is in low-power modes)
 * Thermal/Fan Mode (Quiet, balanced and performance modes)
