@@ -3,6 +3,7 @@ This shell script helps you to provide [Lenovo Vantage](https://www.lenovo.com/u
 
 ## :rocket: Features
 ![image](images/main_menu.png)
+![img.png](images/power_mode_menu.png)
 * Conservation Mode (Limit battery charge to prolong its life)
 * Always-On USB (Enable USB power output when the system is in low-power modes)
 * Thermal/Fan Mode (Quiet, balanced and performance modes)
@@ -11,12 +12,13 @@ This shell script helps you to provide [Lenovo Vantage](https://www.lenovo.com/u
 * Microphone Privacy Switch
 * Touchpad Switch
 * Wi-Fi Switch
+* Power mode switch
 
 ## :computer: Installation
 
 First of all, you need to clone the repository with this command:
 ```bash
-git clone https://github.com/niizam/vantage.git
+git clone https://github.com/Davanok/vantage.git
 cd vantage
 ```
 Then you can easily run this command:
@@ -34,7 +36,7 @@ sudo make uninstall
 ```
 
 ## :warning: Requirements
-* `zenity`
+* `rofi`
 * `xorg-xinput` or `xinput`
 * `networkmanager`
 * `pulseaudio` or `pipewire-pulse`
@@ -44,14 +46,14 @@ if they are not already installed, you can install them using your package manag
 
 For Arch Linux:
 ```bash
-sudo pacman -S zenity xorg-xinput networkmanager
+sudo pacman -S rofi xorg-xinput networkmanager
 ``` 
 For Debian derivatives (Ubuntu, Mint, Pop!_OS, etc):
 ```bash
-sudo apt install zenity xinput
+sudo apt install rofi xinput
 ```
 For Fedora:
 ```bash
-sudo dnf install zenity xinput NetworkManager pipewire-pulseaudio
+sudo dnf install rofi xinput NetworkManager pipewire-pulseaudio
 ```
 ---
