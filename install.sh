@@ -30,29 +30,29 @@ case $distro in
   # Now Vantage can be installed on Cachy OS, ArcoLinux... you name it!
   "arch")
     echo "Installing on Arch Linux or derivative"
-    pacman -Qi zenity xorg-xinput networkmanager &> /dev/null || sudo pacman -S zenity xorg-xinput networkmanager
+    pacman -Qi rofi xorg-xinput networkmanager &> /dev/null || sudo pacman -S rofi xorg-xinput networkmanager
     ;;
 
   # Now Vantage can not only be installed on Ubuntu or POP OS but also Kubuntu, KDE Neon, Xubuntu...
   "debian")
     echo "Installing on Debian or derivative"
-    dpkg -s zenity xinput &> /dev/null || sudo apt install zenity xinput
+    dpkg -s rofi xinput &> /dev/null || sudo apt install rofi xinput
     ;;
   
   # Entry for Linux Mint 21.3 Edge
   "ubuntu debian")
     echo "Installing on Linux Mint Edge"
-    dpkg -s zenity xinput &> /dev/null || sudo apt install zenity xinput
+    dpkg -s rofi xinput &> /dev/null || sudo apt install rofi xinput
     ;;  
 
   "fedora")
     echo "Installing on Fedora"
-    rpm -q zenity xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo dnf install zenity xinput NetworkManager pipewire-pulseaudio
+    rpm -q rofi xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo dnf install rofi xinput NetworkManager pipewire-pulseaudio
     ;;
 
   "opensuse-tumbleweed")
     echo "Installing on OpenSuse"
-    rpm -q zenity xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo zypper install zenity xinput NetworkManager pipewire-pulseaudio
+    rpm -q rofi xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo zypper install rofi xinput NetworkManager pipewire-pulseaudio
     ;;
 
   *)
@@ -62,19 +62,19 @@ case $distro in
     case $package_manager in
         "pacman")
             echo "Detected pacman package manager"
-            pacman -Qi zenity xorg-xinput networkmanager &> /dev/null || sudo pacman -S zenity xorg-xinput networkmanager
+            pacman -Qi rofi xorg-xinput networkmanager &> /dev/null || sudo pacman -S rofi xorg-xinput networkmanager
             ;;
         "apt")
             echo "Detected apt package manager"
-            dpkg -s zenity xinput &> /dev/null || sudo apt install zenity xinput
+            dpkg -s rofi xinput &> /dev/null || sudo apt install rofi xinput
             ;;
         "dnf")
             echo "Detected dnf package manager"
-            rpm -q zenity xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo dnf install zenity xinput NetworkManager pipewire-pulseaudio
+            rpm -q rofi xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo dnf install rofi xinput NetworkManager pipewire-pulseaudio
             ;;
         "zypper")
             echo "Detected zypper package manager"
-            rpm -q zenity xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo zypper install zenity xinput NetworkManager pipewire-pulseaudio
+            rpm -q rofi xinput NetworkManager pipewire-pulseaudio &> /dev/null || sudo zypper install rofi xinput NetworkManager pipewire-pulseaudio
             ;;
         *)
             echo "Unable to detect compatible package manager, exiting."
